@@ -1,6 +1,7 @@
 #! /bin/bash
-
-VMID=8001
+# Script runs regularly with cron. I set up VMID individually for each
+# Proxmox machine
+# VMID=8001
 STORAGE=local-zfs
 USER=artur
 # Required for cron job

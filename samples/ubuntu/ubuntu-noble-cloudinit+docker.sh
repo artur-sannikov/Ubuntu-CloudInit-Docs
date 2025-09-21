@@ -1,6 +1,8 @@
 #! /bin/bash
 # See https://github.com/UntouchedWagons/Ubuntu-CloudInit-Docs/blob/main/samples/ubuntu/ubuntu-noble-cloudinit.sh
-VMID=8300
+# Script runs regularly with cron. I set up VMID individually for each
+# Proxmox machine
+# VMID=8300
 STORAGE=local-zfs
 USER=artur
 # Required for cron job
