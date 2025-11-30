@@ -36,6 +36,6 @@ EOF
 qm set $VMID --cicustom "vendor=local:snippets/debian-13.yaml"
 qm set $VMID --tags debian-template,debian-13,cloudinit
 qm set $VMID --ciuser $USER
-qm set $VMID --sshkeys ~/.ssh/authorized_keys
+qm set $VMID --sshkeys ./servers-authorized-keys
 qm set $VMID --ipconfig0 ip=dhcp
 qm template $VMID

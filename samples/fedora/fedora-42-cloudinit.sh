@@ -31,7 +31,7 @@ qm set $VMID --scsi1 $STORAGE:cloudinit
 cat <<EOF | tee /var/lib/vz/snippets/fedora-42.yaml
 #cloud-config
 runcmd:
-    - dnf update 
+    - dnf update
     - dnf install qemu-guest-agent -y
     - systemctl enable sshd
     - reboot
@@ -40,6 +40,6 @@ EOF
 qm set $VMID --cicustom "vendor=local:snippets/fedora-42.yaml"
 qm set $VMID --tags fedora-template,cloudinit
 qm set $VMID --ciuser $USER
-qm set $VMID --sshkeys ~/.ssh/authorized_keys
+qm set $VMID --sshkeys ./servers-authorized-keys
 qm set $VMID --ipconfig0 ip=dhcp
 qm template $VMID
